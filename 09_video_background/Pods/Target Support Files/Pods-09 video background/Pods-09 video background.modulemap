@@ -1,0 +1,6 @@
+framework module Pods_09_video_background {
+  umbrella header "Pods-09 video background-umbrella.h"
+
+  export *
+  module * { export * }
+}
