@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14112" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="TrackViewCell" customModule="urlsession" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="319" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="319" height="59.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cn5-vt-FDn">
+                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="6kd-fD-fkx"/>
+                            <constraint firstAttribute="width" secondItem="Cn5-vt-FDn" secondAttribute="height" multiplier="1:1" id="UOh-NA-FIz"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qFq-Cx-QbG">
+                        <rect key="frame" x="75" y="0.0" width="134" height="41"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ee3-oS-wBR">
+                                <rect key="frame" x="0.0" y="0.0" width="134" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0K-4t-9Qy">
+                                <rect key="frame" x="0.0" y="20.5" width="134" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0dJ-uo-grR">
+                        <rect key="frame" x="75" y="53" width="134" height="2"/>
+                    </progressView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRd-wL-lrY">
+                        <rect key="frame" x="235" y="15" width="69" height="30"/>
+                        <state key="normal" title="Download"/>
+                        <connections>
+                            <action selector="downloadTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="luK-3B-ce1"/>
+                        </connections>
+                    </button>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cb-B3-lgW">
+                        <rect key="frame" x="274" y="15" width="30" height="30"/>
+                        <state key="normal" title="play"/>
+                        <connections>
+                            <action selector="playTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Fqz-qw-rzY"/>
+                        </connections>
+                    </button>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlQ-YP-c4e">
+                        <rect key="frame" x="220" y="0.0" width="35" height="27"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="Pause"/>
+                        <connections>
+                            <action selector="pauseTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6Vv-rc-yeP"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="100% of 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGq-vJ-3md">
+                        <rect key="frame" x="220" y="38" width="84" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDc-Hi-PHm">
+                        <rect key="frame" x="265" y="0.0" width="39" height="27"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="Cancel"/>
+                        <connections>
+                            <action selector="cancelTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="SOu-GA-5jH"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="vRd-wL-lrY" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="0Om-vL-Rmd"/>
+                    <constraint firstAttribute="trailing" secondItem="mGq-vJ-3md" secondAttribute="trailing" constant="15" id="AZ8-Qm-t27"/>
+                    <constraint firstAttribute="bottom" secondItem="mGq-vJ-3md" secondAttribute="bottom" constant="5" id="BDb-qh-cIF"/>
+                    <constraint firstAttribute="trailing" secondItem="qFq-Cx-QbG" secondAttribute="trailing" constant="110" id="Cla-od-X9z"/>
+                    <constraint firstItem="Cn5-vt-FDn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="D6s-wB-qew"/>
+                    <constraint firstAttribute="trailing" secondItem="vRd-wL-lrY" secondAttribute="trailing" constant="15" id="EcW-GY-Qz8"/>
+                    <constraint firstItem="rDc-Hi-PHm" firstAttribute="leading" secondItem="UlQ-YP-c4e" secondAttribute="trailing" constant="10" id="HcY-6w-qQD"/>
+                    <constraint firstAttribute="trailing" secondItem="0cb-B3-lgW" secondAttribute="trailing" constant="15" id="Uuz-WN-lYI"/>
+                    <constraint firstItem="0dJ-uo-grR" firstAttribute="leading" secondItem="Cn5-vt-FDn" secondAttribute="trailing" constant="15" id="WBc-a8-kVj"/>
+                    <constraint firstItem="qFq-Cx-QbG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ZHm-a0-MHu"/>
+                    <constraint firstItem="0cb-B3-lgW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Zxl-oh-aVg"/>
+                    <constraint firstAttribute="trailing" secondItem="rDc-Hi-PHm" secondAttribute="trailing" constant="15" id="aAE-tf-WTm"/>
+                    <constraint firstItem="UlQ-YP-c4e" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="amE-nL-1y9"/>
+                    <constraint firstItem="rDc-Hi-PHm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="gr8-hz-HeE"/>
+                    <constraint firstItem="qFq-Cx-QbG" firstAttribute="leading" secondItem="Cn5-vt-FDn" secondAttribute="trailing" constant="15" id="h59-4q-bfU"/>
+                    <constraint firstAttribute="trailing" secondItem="0dJ-uo-grR" secondAttribute="trailing" constant="110" id="mNn-z1-PDa"/>
+                    <constraint firstItem="Cn5-vt-FDn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="uqi-b8-a7x"/>
+                    <constraint firstAttribute="bottom" secondItem="0dJ-uo-grR" secondAttribute="bottom" constant="5" id="x5a-py-lO5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="artistLabel" destination="d0K-4t-9Qy" id="ALH-No-jHB"/>
+                <outlet property="cancelButton" destination="rDc-Hi-PHm" id="SJW-xN-hNz"/>
+                <outlet property="downloadButton" destination="vRd-wL-lrY" id="9OE-Y5-6Q8"/>
+                <outlet property="nameLabel" destination="ee3-oS-wBR" id="fth-Ak-mg9"/>
+                <outlet property="pauseButton" destination="UlQ-YP-c4e" id="eJw-Xa-uND"/>
+                <outlet property="playButton" destination="0cb-B3-lgW" id="Y3e-gc-bWM"/>
+                <outlet property="progressLabel" destination="mGq-vJ-3md" id="Igo-dB-4bb"/>
+                <outlet property="progressView" destination="0dJ-uo-grR" id="1qj-9a-36F"/>
+                <outlet property="trackImage" destination="Cn5-vt-FDn" id="niu-6A-VRw"/>
+            </connections>
+            <point key="canvasLocation" x="27.5" y="57"/>
+        </tableViewCell>
+    </objects>
+</document>

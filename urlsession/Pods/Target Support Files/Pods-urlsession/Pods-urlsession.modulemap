@@ -1,0 +1,6 @@
+framework module Pods_urlsession {
+  umbrella header "Pods-urlsession-umbrella.h"
+
+  export *
+  module * { export * }
+}
